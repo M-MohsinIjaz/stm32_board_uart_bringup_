@@ -1,0 +1,5 @@
+../Core/Src/uart_driver_custom.c:5:6:UART_Init_CUSTOM	16	static
+../Core/Src/uart_driver_custom.c:27:6:UART_DeInit_CUSTOM	4	static
+../Core/Src/uart_driver_custom.c:44:6:UART_Configure_BaudRate	24	static
+../Core/Src/uart_driver_custom.c:50:6:UART_Transmit_Data	16	static
+../Core/Src/uart_driver_custom.c:58:6:UART_Receive_Data	24	static

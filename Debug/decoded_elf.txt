@@ -1,0 +1,219 @@
+
+stm32_bootloader.elf:     file format elf32-littlearm
+stm32_bootloader.elf
+architecture: armv7, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x08000385
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x08000000 paddr 0x08000000 align 2**12
+         filesz 0x00001224 memsz 0x00001224 flags r-x
+    LOAD off    0x00003000 vaddr 0x20000000 paddr 0x08001224 align 2**12
+         filesz 0x0000000c memsz 0x0000002c flags rw-
+    LOAD off    0x0000002c vaddr 0x2000002c paddr 0x08001230 align 2**12
+         filesz 0x00000000 memsz 0x00000604 flags rw-
+private flags = 0x5000200: [Version5 EABI] [soft-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .isr_vector   0000010c  08000000  08000000  00001000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .text         000010ec  0800010c  0800010c  0000110c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .rodata       00000024  080011f8  080011f8  000021f8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .ARM.extab    00000000  0800121c  0800121c  0000300c  2**0
+                  CONTENTS
+  4 .ARM          00000000  0800121c  0800121c  0000300c  2**0
+                  CONTENTS
+  5 .preinit_array 00000000  0800121c  0800121c  0000300c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .init_array   00000004  0800121c  0800121c  0000221c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .fini_array   00000004  08001220  08001220  00002220  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .data         0000000c  20000000  08001224  00003000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .bss          00000020  2000000c  08001230  0000300c  2**2
+                  ALLOC
+ 10 ._user_heap_stack 00000604  2000002c  08001230  0000302c  2**0
+                  ALLOC
+ 11 .ARM.attributes 00000029  00000000  00000000  0000300c  2**0
+                  CONTENTS, READONLY
+ 12 .debug_info   000028ed  00000000  00000000  00003035  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_abbrev 00000e39  00000000  00000000  00005922  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_aranges 000003d8  00000000  00000000  00006760  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .debug_rnglists 000002bd  00000000  00000000  00006b38  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 16 .debug_macro  00015575  00000000  00000000  00006df5  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 17 .debug_line   000049d1  00000000  00000000  0001c36a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 18 .debug_str    00079911  00000000  00000000  00020d3b  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 19 .comment      00000043  00000000  00000000  0009a64c  2**0
+                  CONTENTS, READONLY
+ 20 .debug_frame  00000d50  00000000  00000000  0009a690  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 21 .debug_line_str 00000075  00000000  00000000  0009b3e0  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+08000000 l    d  .isr_vector	00000000 .isr_vector
+0800010c l    d  .text	00000000 .text
+080011f8 l    d  .rodata	00000000 .rodata
+0800121c l    d  .ARM.extab	00000000 .ARM.extab
+0800121c l    d  .ARM	00000000 .ARM
+0800121c l    d  .preinit_array	00000000 .preinit_array
+0800121c l    d  .init_array	00000000 .init_array
+08001220 l    d  .fini_array	00000000 .fini_array
+20000000 l    d  .data	00000000 .data
+2000000c l    d  .bss	00000000 .bss
+2000002c l    d  ._user_heap_stack	00000000 ._user_heap_stack
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    df *ABS*	00000000 startup_stm32f103c6tx.o
+f108f85f l       *ABS*	00000000 BootRAM
+08000398 l       .text	00000000 LoopCopyDataInit
+08000392 l       .text	00000000 CopyDataInit
+080003aa l       .text	00000000 LoopFillZerobss
+080003a6 l       .text	00000000 FillZerobss
+080003cc l       .text	00000000 Infinite_Loop
+00000000 l    df *ABS*	00000000 crtbegin.o
+080011e0 l     O .text	00000000 __EH_FRAME_BEGIN__
+0800010c l     F .text	00000000 __do_global_dtors_aux
+2000000c l       .bss	00000001 completed.1
+08001220 l     O .fini_array	00000000 __do_global_dtors_aux_fini_array_entry
+08000130 l     F .text	00000000 frame_dummy
+20000010 l       .bss	00000018 object.0
+0800121c l     O .init_array	00000000 __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000 main.c
+08000234 l     F .text	0000007c MX_GPIO_Init
+00000000 l    df *ABS*	00000000 stm32f1xx_hal_msp.c
+00000000 l    df *ABS*	00000000 stm32f1xx_it.c
+00000000 l    df *ABS*	00000000 system_stm32f1xx.c
+00000000 l    df *ABS*	00000000 stm32f1xx_hal.c
+00000000 l    df *ABS*	00000000 stm32f1xx_hal_cortex.c
+080004dc l     F .text	00000048 __NVIC_SetPriorityGrouping
+08000524 l     F .text	0000001c __NVIC_GetPriorityGrouping
+08000540 l     F .text	00000054 __NVIC_SetPriority
+08000594 l     F .text	00000064 NVIC_EncodePriority
+080005f8 l     F .text	00000044 SysTick_Config
+00000000 l    df *ABS*	00000000 stm32f1xx_hal_gpio.c
+00000000 l    df *ABS*	00000000 stm32f1xx_hal_rcc.c
+0800114c l     F .text	0000003c RCC_Delay
+08001208 l     O .rodata	00000010 aPLLMULFactorTable.1
+08001218 l     O .rodata	00000002 aPredivFactorTable.0
+00000000 l    df *ABS*	00000000 libc_a-memset.o
+00000000 l    df *ABS*	00000000 libc_a-init.o
+00000000 l    df *ABS*	00000000 crti.o
+00000000 l    df *ABS*	00000000 crtn.o
+00000000 l    df *ABS*	00000000 
+08001220 l       .init_array	00000000 __init_array_end
+0800121c l       .preinit_array	00000000 __preinit_array_end
+0800121c l       .init_array	00000000 __init_array_start
+0800121c l       .preinit_array	00000000 __preinit_array_start
+080003cc  w    F .text	00000002 RTC_Alarm_IRQHandler
+080003cc  w    F .text	00000002 EXTI2_IRQHandler
+08000354 g     F .text	0000000c DebugMon_Handler
+08000652 g     F .text	00000038 HAL_NVIC_SetPriority
+080003cc  w    F .text	00000002 TIM1_CC_IRQHandler
+08000328 g     F .text	00000008 HardFault_Handler
+00000400 g       *ABS*	00000000 _Min_Stack_Size
+0800036c g     F .text	0000000c SysTick_Handler
+0800099c g     F .text	00000030 HAL_GPIO_WritePin
+080003cc  w    F .text	00000002 PVD_IRQHandler
+08001224 g       *ABS*	00000000 _sidata
+08000360 g     F .text	0000000c PendSV_Handler
+08000320 g     F .text	00000008 NMI_Handler
+0800121c g       .ARM	00000000 __exidx_end
+080003cc  w    F .text	00000002 EXTI3_IRQHandler
+080010a4 g     F .text	000000a8 HAL_RCC_GetSysClockFreq
+080002bc g     F .text	00000064 HAL_MspInit
+080011f8 g       .text	00000000 _etext
+2000000c g       .bss	00000000 _sbss
+080006a4 g     F .text	000002f8 HAL_GPIO_Init
+080003cc  w    F .text	00000002 EXTI0_IRQHandler
+08000494  w    F .text	00000048 HAL_Delay
+20000000 g     O .data	00000004 SystemCoreClock
+20000008 g     O .data	00000001 uwTickFreq
+08000340 g     F .text	00000008 UsageFault_Handler
+080003cc  w    F .text	00000002 ADC1_2_IRQHandler
+2000000c g       .bss	00000000 __bss_start__
+20000000 g       .data	00000000 _sdata
+080003cc  w    F .text	00000002 SPI1_IRQHandler
+080003cc  w    F .text	00000002 TAMPER_IRQHandler
+20000028 g     O .bss	00000004 uwTick
+080001bc g     F .text	00000076 SystemClock_Config
+0800068a g     F .text	00000018 HAL_SYSTICK_Config
+0800121c g       .ARM	00000000 __exidx_start
+08001198 g     F .text	00000048 __libc_init_array
+080003cc  w    F .text	00000002 DMA1_Channel4_IRQHandler
+080011e0 g     F .text	00000000 _init
+080003cc  w    F .text	00000002 RTC_IRQHandler
+2000002c g       .bss	00000000 _ebss
+080003cc  w    F .text	00000002 DMA1_Channel7_IRQHandler
+08000384  w    F .text	00000034 Reset_Handler
+080003cc  w    F .text	00000002 CAN1_RX1_IRQHandler
+20000004 g     O .data	00000004 uwTickPrio
+080003d0 g     F .text	0000002c HAL_Init
+080003cc  w    F .text	00000002 I2C1_EV_IRQHandler
+080003cc  w    F .text	00000002 DMA1_Channel6_IRQHandler
+2000002c g       .bss	00000000 __bss_end__
+080003cc  w    F .text	00000002 TIM3_IRQHandler
+080003cc  w    F .text	00000002 RCC_IRQHandler
+080003cc  w    F .text	00000002 TIM1_TRG_COM_IRQHandler
+00000200 g       *ABS*	00000000 _Min_Heap_Size
+080003cc  w    F .text	00000002 DMA1_Channel1_IRQHandler
+080003cc g       .text	00000002 Default_Handler
+080011f8 g     O .rodata	00000010 AHBPrescTable
+080003cc  w    F .text	00000002 EXTI15_10_IRQHandler
+08000ed0 g     F .text	000001d4 HAL_RCC_ClockConfig
+0800063c g     F .text	00000016 HAL_NVIC_SetPriorityGrouping
+080003cc  w    F .text	00000002 EXTI9_5_IRQHandler
+08000480  w    F .text	00000014 HAL_GetTick
+08001188 g     F .text	00000010 memset
+08000330 g     F .text	00000008 MemManage_Handler
+0800014c g     F .text	00000070 main
+08000348 g     F .text	0000000c SVC_Handler
+080003cc  w    F .text	00000002 DMA1_Channel5_IRQHandler
+080003cc  w    F .text	00000002 EXTI4_IRQHandler
+080003cc  w    F .text	00000002 USB_LP_CAN1_RX0_IRQHandler
+08000378 g     F .text	0000000c SystemInit
+080011ec g     F .text	00000000 _fini
+080003cc  w    F .text	00000002 USB_HP_CAN1_TX_IRQHandler
+080003cc  w    F .text	00000002 DMA1_Channel3_IRQHandler
+080003fc  w    F .text	00000060 HAL_InitTick
+080003cc  w    F .text	00000002 TIM1_UP_IRQHandler
+0800045c  w    F .text	00000024 HAL_IncTick
+080003cc  w    F .text	00000002 WWDG_IRQHandler
+080003cc  w    F .text	00000002 TIM2_IRQHandler
+080003cc  w    F .text	00000002 TIM1_BRK_IRQHandler
+20002800 g       .isr_vector	00000000 _estack
+080003cc  w    F .text	00000002 EXTI1_IRQHandler
+2000000c g       .data	00000000 _edata
+20000030 g       ._user_heap_stack	00000000 _end
+080003cc  w    F .text	00000002 USART2_IRQHandler
+080009cc g     F .text	00000504 HAL_RCC_OscConfig
+08000000 g     O .isr_vector	00000000 g_pfnVectors
+080003cc  w    F .text	00000002 DMA1_Channel2_IRQHandler
+080003cc  w    F .text	00000002 CAN1_SCE_IRQHandler
+080003cc  w    F .text	00000002 FLASH_IRQHandler
+08000338 g     F .text	00000008 BusFault_Handler
+080003cc  w    F .text	00000002 USART1_IRQHandler
+080003cc  w    F .text	00000002 I2C1_ER_IRQHandler
+080003cc  w    F .text	00000002 USBWakeUp_IRQHandler
+080002b0 g     F .text	0000000c Error_Handler
+
+

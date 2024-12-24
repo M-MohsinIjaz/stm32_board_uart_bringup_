@@ -1,0 +1,2 @@
+../Core/Startup/custom_startup.c:49:6:Reset_Handler	16	static
+../Core/Startup/custom_startup.c:76:28:Default_Handler	4	static

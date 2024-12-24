@@ -1,0 +1,2 @@
+../Core/Src/uart_driver.c:3:6:UART_SendString	2
+../Core/Src/uart_driver.c:10:6:UART_ReceiveString	4
